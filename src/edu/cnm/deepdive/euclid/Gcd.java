@@ -23,7 +23,24 @@ catch (ArrayIndexOutOfBoundsException ex) {
   }
 
   public static int gcd (int a, int b) {
-    return 0;
+    a = Math.abs (a);
+    b = Math.abs(b);
+    if ( a ==0 ){
+      return b;
+    }
+    if (b ==0){
+      return a;
+    }
+    while (a != b) {
+     if (a > b ) {
+       a= a-b;
+       
+     } else {
+      if (b > a) 
+        b= b-a;
+     }
+    }
+    return a;
   }
 
 }
